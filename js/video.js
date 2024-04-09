@@ -13,6 +13,7 @@ window.addEventListener("load", function() {
 
 //play vid 
 document.querySelector("#play").addEventListener("click", function() {
+	document.querySelector('#volume').innerHTML = (video.volume * 100) + "%"
 	console.log("Play Video");
 	video.play();
 });
@@ -67,8 +68,8 @@ document.querySelector("#mute").addEventListener("click", function() {
 })
 
 // //volume 
- document.querySelector("#slider").addEventListener("input", function() {
-	video.volume = document.querySelector("slider").value / 100;
+document.querySelector("#slider").addEventListener("input", function() {
+	video.volume = document.querySelector("#slider").value / 100;
 	document.querySelector('#volume').innerHTML = (video.volume * 100) + "%"
 	console.log('Current volume is ' + video.volume)
 
