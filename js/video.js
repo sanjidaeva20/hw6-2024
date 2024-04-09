@@ -68,8 +68,8 @@ document.querySelector("#mute").addEventListener("click", function() {
 
 // //volume 
  document.querySelector("#slider").addEventListener("input", function() {
-	video.volume = document.getElementById("slider").value / 100;
-	document.querySelector('#volume').innerHTML = video.volume * 100 + "%"
+	video.volume = document.querySelector("slider").value / 100;
+	document.querySelector('#volume').innerHTML = (video.volume * 100) + "%"
 	console.log('Current volume is ' + video.volume)
 
  });
